@@ -191,6 +191,13 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .badge.available {
@@ -373,16 +380,26 @@
             <p>Check out the apps we've built and published</p>
             <div class="apps-grid">
                 <div class="app-card">
-                    <div class="app-icon">💊</div>
-                    <h3>PillCheckr</h3>
+                    <a href="apps/pillcheckr/" style="text-decoration: none;">
+                        <div class="app-icon">
+                            <img src="apps/pillcheckr/assets/images/icon.png" alt="PillCheckr Icon" style="width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        </div>
+                    </a>
+                    <a href="apps/pillcheckr/" style="text-decoration: none; color: inherit;">
+                        <h3>PillCheckr</h3>
+                    </a>
                     <p class="app-tagline">AI-Powered Pill Identification</p>
                     <p class="app-description">
                         Instantly identify pills using advanced OCR and AI technology. Snap a photo or enter details
                         manually to get comprehensive medication information with confidence ratings.
                     </p>
                     <div class="app-badges">
-                        <span class="badge available">Available on Android</span>
-                        <span class="badge coming">iOS Coming Soon</span>
+                        <a href="https://play.google.com/store/apps/details?id=com.grubbytech.pillcheckr" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <span class="badge available">Available on Android</span>
+                        </a>
+                        <a href="https://testflight.apple.com/join/AHAXXxFP" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <span class="badge available">iOS Beta (TestFlight)</span>
+                        </a>
                     </div>
                     <a href="apps/pillcheckr/" class="app-link">Learn More →</a>
                 </div>
