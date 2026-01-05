@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SleepDBN - Deep Brown Noise Generator for better sleep and relaxation">
+    <title>SleepDBN - Deep Brown Noise Generator | GrubbyTech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #2c3e50;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        section p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .science {
+            background: #f8f9fa;
+        }
+
+        .science-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .science-content h3 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .science-content p {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .benefits {
+            background: white;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .benefit-item h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            text-align: left;
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero-icon {
+                font-size: 80px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .science-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html">GrubbyTech</a></div>
+            <nav>
+                <a href="../../index.html#about">About</a>
+                <a href="../../index.html#apps">Apps</a>
+                <a href="../../index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-icon">🌙</div>
+            <h1>SleepDBN</h1>
+            <p>Deep Brown Noise for deeper sleep</p>
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <span>📱</span>
+                    <span>Download on iOS</span>
+                </a>
+                <a href="#" class="download-btn">
+                    <span>🤖</span>
+                    <span>Get it on Android</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <p>Everything you need for the perfect sleep environment</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Deep Brown Noise</h3>
+                    <p>High-quality, algorithmically generated brown noise with deeper bass frequencies for optimal relaxation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎚️</div>
+                    <h3>Customizable Profiles</h3>
+                    <p>Adjust frequency curves, volume, and tone to create your perfect sleep sound environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Sleep Timer</h3>
+                    <p>Set a timer with smooth fade-out so the audio gently stops after you've fallen asleep.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📴</div>
+                    <h3>Offline Mode</h3>
+                    <p>Generate and play brown noise completely offline - no internet connection required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Battery Efficient</h3>
+                    <p>Optimized algorithms ensure minimal battery drain during all-night playback.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>High Fidelity</h3>
+                    <p>Crystal clear audio output with support for high-quality headphones and speakers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="science" class="science">
+        <div class="container">
+            <h2>The Science of Brown Noise</h2>
+            <div class="science-content">
+                <h3>What is Brown Noise?</h3>
+                <p>
+                    Brown noise, also known as Brownian noise or red noise, is a type of sound signal with a power density
+                    that decreases 6 dB per octave with increasing frequency. This gives it deeper, richer bass frequencies
+                    compared to white or pink noise, creating a rumbling, soothing sound reminiscent of a waterfall or heavy rainfall.
+                </p>
+
+                <h3>Why Brown Noise for Sleep?</h3>
+                <p>
+                    The deeper frequencies in brown noise are particularly effective at masking environmental sounds that
+                    might disturb your sleep. The consistent, low-frequency rumble helps your brain tune out sudden noises
+                    while creating a calming audio environment that promotes deeper, more restful sleep.
+                </p>
+
+                <h3>The Deep Brown Noise Difference</h3>
+                <p>
+                    SleepDBN uses advanced audio engineering to generate brown noise with enhanced low-frequency content.
+                    This "deep" brown noise provides even more effective sound masking and a more immersive relaxation experience
+                    than standard brown noise generators.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Benefits</h2>
+            <p>How SleepDBN can improve your sleep quality</p>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <h3>😴 Fall Asleep Faster</h3>
+                    <p>The soothing sound helps quiet racing thoughts and creates an optimal environment for sleep onset.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🛌 Sleep Deeper</h3>
+                    <p>Consistent background noise masks disruptive sounds, helping you achieve deeper, more restorative sleep cycles.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🏙️ Block Distractions</h3>
+                    <p>Perfect for noisy environments - effectively masks traffic, neighbors, and other urban sounds.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🧘 Reduce Stress</h3>
+                    <p>The calming frequencies help lower stress and anxiety, promoting overall relaxation.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🎯 Improve Focus</h3>
+                    <p>Use during the day to create a consistent audio backdrop that enhances concentration and productivity.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>👶 Soothe Babies</h3>
+                    <p>The deep, womb-like sounds can help calm and soothe infants for better sleep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GrubbyTech. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
