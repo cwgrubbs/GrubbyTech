@@ -120,6 +120,104 @@
             background: white;
         }
 
+        .apps {
+            background: #f8f9fa;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .app-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .app-icon {
+            font-size: 72px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .app-card h3 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .app-tagline {
+            font-size: 16px;
+            color: #764ba2;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px !important;
+        }
+
+        .app-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .app-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.available {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .badge.coming {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .app-link {
+            display: inline-block;
+            text-align: center;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 12px 0;
+            transition: color 0.3s;
+        }
+
+        .app-link:hover {
+            color: #764ba2;
+        }
+
         .services {
             background: #f8f9fa;
         }
@@ -242,6 +340,7 @@
             <div class="logo">GrubbyTech</div>
             <nav>
                 <a href="#about">About</a>
+                <a href="#apps">Apps</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -265,6 +364,42 @@
                 across iOS, Android, web, and desktop platforms. We believe in quality over quantity,
                 and our agile approach means faster iterations and better outcomes for your project.
             </p>
+        </div>
+    </section>
+
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2>Our Apps</h2>
+            <p>Check out the apps we've built and published</p>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon">💊</div>
+                    <h3>PillCheckr</h3>
+                    <p class="app-tagline">AI-Powered Pill Identification</p>
+                    <p class="app-description">
+                        Instantly identify pills using advanced OCR and AI technology. Snap a photo or enter details
+                        manually to get comprehensive medication information with confidence ratings.
+                    </p>
+                    <div class="app-badges">
+                        <span class="badge available">Available on Android</span>
+                        <span class="badge coming">iOS Coming Soon</span>
+                    </div>
+                    <a href="apps/pillcheckr/" class="app-link">Learn More →</a>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🌙</div>
+                    <h3>SleepDBN</h3>
+                    <p class="app-tagline">Deep Brown Noise Generator</p>
+                    <p class="app-description">
+                        Experience deeper, more restful sleep with our advanced brown noise generator.
+                        Customizable profiles, sleep timer, and high-fidelity audio for the perfect sleep environment.
+                    </p>
+                    <div class="app-badges">
+                        <span class="badge coming">Coming Soon</span>
+                    </div>
+                    <a href="apps/sleepdbn/" class="app-link">Learn More →</a>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -1,4 +1,105 @@
-# GrubbyTech Website
+# GrubbyTech - Small Studio, Big Apps
+
+Professional website for GrubbyTech, showcasing our cross-platform applications.
+
+## 🚀 Featured Apps
+
+### PillCheckr
+**AI-Powered Pill Identification**
+- Available on [Google Play Store](https://play.google.com/store/apps/details?id=com.grubbytech.pillcheckr)
+- Coming soon to iOS
+- [Learn more](apps/pillcheckr/)
+
+### SleepDBN
+**Deep Brown Noise Generator**
+- Coming soon to Android and iOS
+- [Learn more](apps/sleepdbn/)
+
+## 📁 Project Structure
+
+```
+GrubbyTech/
+├── index.html              # Main landing page
+├── apps/
+│   ├── pillcheckr/        # PillCheckr app page
+│   │   ├── assets/        # Icons and screenshots
+│   │   └── index.html
+│   └── sleepdbn/          # SleepDBN app page
+│       ├── assets/        # Icons and screenshots
+│       └── index.html
+├── ASSETS_SETUP.md        # Guide for adding app assets
+├── IMPLEMENTATION_SUMMARY.md  # Implementation details
+├── copy-assets.ps1        # PowerShell script to copy assets
+└── README.md              # This file
+```
+
+## 🎨 Design Features
+
+- **Modern, Professional Design**: Gradient backgrounds, smooth animations, and responsive layout
+- **Mobile-First**: Fully responsive design that works on all devices
+- **Static Site**: No backend required - host for free on GitHub Pages, Netlify, or Vercel
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Fast Loading**: Optimized for performance
+
+## 🛠️ Setup & Deployment
+
+### Adding Your App Assets
+
+1. **Run the automated script:**
+   ```powershell
+   .\copy-assets.ps1
+   ```
+
+2. **Or manually copy assets** following instructions in `ASSETS_SETUP.md`
+
+### Local Development
+
+Simply open `index.html` in a web browser. No build process required!
+
+### Deploy to GitHub Pages
+
+1. Push to GitHub
+2. Go to Settings → Pages
+3. Select source branch
+4. Your site will be live at `https://yourusername.github.io/GrubbyTech/`
+
+### Deploy to Netlify
+
+1. Connect your GitHub repository
+2. Netlify will auto-deploy (no build command needed)
+3. Set up custom domain if desired
+
+## 📝 Implementation Status
+
+✅ Main landing page with Apps section  
+✅ PillCheckr page with Google Play link  
+✅ SleepDBN page with Coming Soon badges  
+✅ Screenshot placeholders (ready for real images)  
+✅ Asset directories created  
+✅ Responsive design  
+✅ Modern UI/UX  
+✅ SEO meta tags  
+
+📋 Next Steps:
+- Add real app screenshots
+- Add app icons
+- Optimize images for web
+- Set up analytics (optional)
+- Add more content (testimonials, FAQs, etc.)
+
+## 📧 Contact
+
+- **Email**: support@grubbytech.com
+- **GitHub**: [@cwgrubbs](https://github.com/cwgrubbs)
+
+## 📄 License
+
+See [LICENSE](LICENSE) file for details.
+
+---
+
+**Last Updated**: January 5, 2026  
+**Status**: Ready for deployment ✅ Website
 
 Small Studio, Big Apps - Cross-platform app development
 
