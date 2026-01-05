@@ -1,0 +1,7 @@
+name = "grubbytech"
+compatibility_date = "2026-01-05"
+
+# Static site - deploy everything from root
+pages_build_output_dir = "."
+
+
