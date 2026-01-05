@@ -1,12 +1,17 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to Cloudflare Pages (DISABLED)
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+# WORKFLOW DISABLED - Cloudflare Pages is already auto-deploying from Git
+# To re-enable, uncomment the 'on:' section below and add the required secrets:
+# - CLOUDFLARE_API_TOKEN
+# - CLOUDFLARE_ACCOUNT_ID
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# on:
+#   # Runs on pushes targeting the default branch
+#   push:
+#     branches: ["main"]
+#
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
 
 jobs:
   deploy:
