@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SleepDBN - Deep Brown Noise Generator for better sleep and relaxation">
     <title>SleepDBN - Deep Brown Noise Generator | GrubbyTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,7 +16,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
@@ -26,7 +29,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -39,6 +42,7 @@
         }
 
         .logo {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 28px;
             font-weight: bold;
             letter-spacing: -1px;
@@ -62,20 +66,39 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 100px 0;
             text-align: center;
         }
 
         .hero-icon {
-            font-size: 120px;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+            border: 3px solid rgba(255,255,255,0.2);
+            position: relative;
+            padding: 8px;
+            background: white;
+        }
+
+        .app-icon:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
         .hero h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 56px;
-            font-weight: 800;
+            font-weight: 600;
             margin-bottom: 20px;
             line-height: 1.2;
         }
@@ -83,7 +106,8 @@
         .hero p {
             font-size: 24px;
             margin-bottom: 40px;
-            opacity: 0.95;
+            color: #fafaff;
+            font-weight: 400;
         }
 
         .download-buttons {
@@ -98,7 +122,7 @@
             align-items: center;
             gap: 12px;
             background: white;
-            color: #2c3e50;
+            color: #667eea;
             padding: 15px 30px;
             border-radius: 10px;
             text-decoration: none;
@@ -127,48 +151,51 @@
             font-size: 40px;
             margin-bottom: 50px;
             text-align: center;
-            color: #2c3e50;
+            color: #667eea;
         }
 
         .screenshots-slider {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
             gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            justify-content: center;
         }
 
-        .screenshot-placeholder {
-            aspect-ratio: 9/16;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        .screenshots-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshots-slider::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .screenshots-slider::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .screenshots-slider::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        .screenshot-img {
+            flex: 0 0 auto;
+            height: 600px;
+            width: auto;
+            object-fit: contain;
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .screenshot-placeholder:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .placeholder-content {
-            text-align: center;
-            color: white;
-        }
-
-        .placeholder-icon {
-            font-size: 60px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .placeholder-content p {
-            font-size: 16px;
-            color: rgba(255,255,255,0.9);
-            font-weight: 600;
+        .screenshot-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         section {
@@ -179,7 +206,7 @@
             font-size: 40px;
             margin-bottom: 20px;
             text-align: center;
-            color: #2c3e50;
+            color: #667eea;
         }
 
         section p {
@@ -214,7 +241,7 @@
         .feature-card h3 {
             font-size: 24px;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #667eea;
         }
 
         .feature-card p {
@@ -237,7 +264,7 @@
 
         .science-content h3 {
             font-size: 28px;
-            color: #2c3e50;
+            color: #667eea;
             margin-bottom: 20px;
         }
 
@@ -264,12 +291,12 @@
             background: #f8f9fa;
             padding: 30px;
             border-radius: 10px;
-            border-left: 4px solid #2c3e50;
+            border-left: 4px solid #667eea;
         }
 
         .benefit-item h3 {
             font-size: 20px;
-            color: #2c3e50;
+            color: #667eea;
             margin-bottom: 10px;
         }
 
@@ -281,7 +308,7 @@
         }
 
         footer {
-            background: #2c3e50;
+            background: #667eea;
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -301,8 +328,9 @@
                 font-size: 18px;
             }
 
-            .hero-icon {
-                font-size: 80px;
+            .app-icon {
+                width: 80px;
+                height: 80px;
             }
 
             section h2 {
@@ -331,6 +359,10 @@
             .science-content {
                 padding: 30px 20px;
             }
+
+            .screenshot-img {
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -348,7 +380,9 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-icon">🌙</div>
+            <div class="hero-icon">
+                <img src="assets/images/icon.png" alt="SleepDBN Icon" class="app-icon">
+            </div>
             <h1>SleepDBN</h1>
             <p>Deep Brown Noise for deeper, more restful sleep</p>
             <div class="download-buttons">
@@ -370,26 +404,10 @@
 
     <section class="screenshots">
         <div class="container">
-            <h2>Experience Deep Brown Noise</h2>
+            <h2>Deep Brown Noise for Better Sleep</h2>
+            <p>Deep brown noise emphasizes lower frequencies, creating a rumbling sound similar to heavy rainfall or distant thunder. This bass-heavy tone effectively masks low-frequency background noises like traffic and air conditioning, helping reduce stress and promote deeper, more restful sleep.</p>
             <div class="screenshots-slider">
-                <div class="screenshot-placeholder">
-                    <div class="placeholder-content">
-                        <span class="placeholder-icon">🎵</span>
-                        <p>Main Interface</p>
-                    </div>
-                </div>
-                <div class="screenshot-placeholder">
-                    <div class="placeholder-content">
-                        <span class="placeholder-icon">🎚️</span>
-                        <p>Customization</p>
-                    </div>
-                </div>
-                <div class="screenshot-placeholder">
-                    <div class="placeholder-content">
-                        <span class="placeholder-icon">⏰</span>
-                        <p>Timer Settings</p>
-                    </div>
-                </div>
+                <img src="assets/screenshots/Screenshot_20260106_120158_SleepDBN.jpg" alt="SleepDBN Main Interface" class="screenshot-img">
             </div>
         </div>
     </section>
