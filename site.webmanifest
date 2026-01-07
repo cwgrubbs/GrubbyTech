@@ -1,0 +1,16 @@
+{
+  "name": "GrubbyTech",
+  "short_name": "GrubbyTech",
+  "description": "Cross-platform app development studio",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
+
