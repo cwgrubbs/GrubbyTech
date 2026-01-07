@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Preview - GrubbyTech</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #667eea;
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .preview-box {
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .preview-box h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .light {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+        }
+        .dark {
+            background: #1a1a1a;
+            color: white;
+        }
+        .gray {
+            background: #808080;
+            color: white;
+        }
+        .google {
+            background: #f8f9fa;
+            border: 2px solid #dadce0;
+        }
+        img {
+            width: 64px;
+            height: 64px;
+        }
+        .sizes {
+            margin-top: 30px;
+        }
+        .size-box {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .size-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GrubbyTech Favicon Preview</h1>
+    <p>Your favicon will look like this on different backgrounds:</p>
+
+    <div class="preview-grid">
+        <div class="preview-box light">
+            <h3>Light Theme</h3>
+            <img src="/favicon.svg" alt="Favicon on light background">
+        </div>
+
+        <div class="preview-box dark">
+            <h3>Dark Theme</h3>
+            <img src="/favicon.svg" alt="Favicon on dark background">
+        </div>
+
+        <div class="preview-box gray">
+            <h3>Gray Background</h3>
+            <img src="/favicon.svg" alt="Favicon on gray background">
+        </div>
+
+        <div class="preview-box google">
+            <h3>Google Search</h3>
+            <img src="/favicon.svg" alt="Favicon in Google search" style="width: 24px; height: 24px;">
+        </div>
+    </div>
+
+    <div class="sizes">
+        <h2>Different Sizes</h2>
+        <p>SVG scales perfectly at any size:</p>
+
+        <div class="size-box">
+            <img src="/favicon.svg" alt="16px" style="width: 16px; height: 16px;">
+            <div class="size-label">16x16 (tab)</div>
+        </div>
+
+        <div class="size-box">
+            <img src="/favicon.svg" alt="32px" style="width: 32px; height: 32px;">
+            <div class="size-label">32x32 (tab)</div>
+        </div>
+
+        <div class="size-box">
+            <img src="/favicon.svg" alt="64px" style="width: 64px; height: 64px;">
+            <div class="size-label">64x64 (bookmark)</div>
+        </div>
+
+        <div class="size-box">
+            <img src="/favicon.svg" alt="128px" style="width: 128px; height: 128px;">
+            <div class="size-label">128x128 (desktop)</div>
+        </div>
+
+        <div class="size-box">
+            <img src="/favicon.svg" alt="256px" style="width: 256px; height: 256px;">
+            <div class="size-label">256x256 (mobile)</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; padding: 20px; background: #f0f0f0; border-radius: 8px;">
+        <h3>Favicon Details:</h3>
+        <ul>
+            <li><strong>Format:</strong> SVG (scales perfectly at any size)</li>
+            <li><strong>Background:</strong> Purple circle (#667eea)</li>
+            <li><strong>Icon:</strong> White strokes (#ffffff)</li>
+            <li><strong>Visibility:</strong> Works on any background color or theme</li>
+            <li><strong>File Size:</strong> ~750 bytes (very small!)</li>
+        </ul>
+    </div>
+</body>
+</html>
+
