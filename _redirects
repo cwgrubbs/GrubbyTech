@@ -1,0 +1,10 @@
+# Cloudflare Pages Redirects
+# This file handles URL redirects for better SEO
+
+# Redirect www to non-www (if applicable)
+# https://www.grubbytech.com/* https://grubbytech.com/:splat 301
+
+# Ensure trailing slashes are handled consistently
+/apps/pillcheckr /apps/pillcheckr/ 301
+/apps/sleepdbn /apps/sleepdbn/ 301
+

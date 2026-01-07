@@ -43,6 +43,51 @@ GrubbyTech/
 
 ## 🛠️ Setup & Deployment
 
+### SEO Setup & Google Search Console
+
+**SEO Files Included:**
+- ✅ `robots.txt` - Allows search engines to crawl all pages
+- ✅ `sitemap.xml` - Helps search engines discover all pages
+- ✅ `_headers` - Security and caching headers for Cloudflare Pages
+- ✅ Comprehensive meta tags (Open Graph, Twitter Cards, structured data)
+
+**To Get Your Site Indexed by Google:**
+
+1. **Submit to Google Search Console:**
+   - Go to [Google Search Console](https://search.google.com/search-console)
+   - Click "Add Property"
+   - Enter your domain: `grubbytech.com`
+   - Verify ownership (DNS or HTML file method)
+
+2. **Submit Your Sitemap:**
+   - In Search Console, go to "Sitemaps"
+   - Submit: `https://grubbytech.com/sitemap.xml`
+   - Google will start crawling within 24-48 hours
+
+3. **Request Indexing:**
+   - In Search Console, use "URL Inspection" tool
+   - Enter: `https://grubbytech.com`
+   - Click "Request Indexing" to expedite the process
+   - Repeat for your app pages:
+     - `https://grubbytech.com/apps/pillcheckr/`
+     - `https://grubbytech.com/apps/sleepdbn/`
+
+4. **Submit to Bing:**
+   - Go to [Bing Webmaster Tools](https://www.bing.com/webmasters)
+   - Import from Google Search Console or add manually
+   - Submit sitemap
+
+5. **Build Backlinks:**
+   - Share your site on social media
+   - Add your site to app directories
+   - Link from your GitHub profile
+   - Add to relevant forums or communities
+
+**Expected Timeline:**
+- Google may take 1-7 days to index your homepage
+- Full site indexing typically takes 1-2 weeks
+- Rankings improve over time with content and backlinks
+
 ### Adding Your App Assets
 
 1. **Run the automated script:**

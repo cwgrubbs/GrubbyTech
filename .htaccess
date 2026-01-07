@@ -1,0 +1,13 @@
+# GrubbyTech - Website Redirects and Rules
+
+# If you're using Cloudflare Pages, this file won't be used.
+# The _headers file handles headers and security.
+# Cloudflare Pages automatically handles redirects via _redirects file if needed.
+
+# For reference, if you ever move to Apache hosting:
+# - This would force HTTPS
+# - Handle www to non-www redirects
+# - Set caching rules
+
+# For now, Cloudflare handles all of this automatically.
+
